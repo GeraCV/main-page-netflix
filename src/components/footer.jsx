@@ -3,39 +3,61 @@ import styled from 'styled-components'
 
 
 const FooterStyled = styled.footer`
-background: #000;
-color: gray;
-padding: 1rem;
-
-
-.text-principal-footer {
- margin: 2.5rem 0;
-  text-align: center;
-}
-
-.about-us{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 1rem 0;
-}
-
-.a-footer {
-  color: gray;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: .8em;
-  padding: .5rem 1rem;
-}
-
-.select-footer {
-  padding: 1rem;
   background: #000;
   color: gray;
-  font-size: 1.1rem;
-  margin: 1rem;
-  border-radius: .2rem;
+  padding: 1rem;
+
+
+  .text-principal-footer {
+    margin: 2.5rem 1rem;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  .about-us {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 0;
+  }
+
+
+  .a-footer {
+    color: gray;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: .8em;
+    padding: .5rem 1rem;
+  }
+
+  .select-footer {
+    padding: 1rem;
+    background: #000;
+    color: gray;
+    font-size: 1.1rem;
+    margin: 1rem;
+    border-radius: .2rem;
+  }
+
+@media screen and (min-width: 500px) {
+  .about-us { 
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
+@media screen and (min-width: 550px) {
+  padding: 3rem;
+}
+
+@media screen and (min-width: 950px) {
+  .about-us { 
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
 `
 const Footer = () => {
   return (

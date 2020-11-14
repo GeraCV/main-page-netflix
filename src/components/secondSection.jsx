@@ -5,27 +5,68 @@ import ButonStart from './butonStart'
 import InputRegister from './butonRegister'
 
 const SecondSectionStyled = styled.section`
-color: #fff;
-background: #000;
-padding-top: 3rem;
-margin: 0;
-text-align:center;
-border-bottom: 10px solid gray;
+  color: #fff;
+  background: #000;
+  padding-top: 3rem;
+  margin: 0;
+  text-align:center;
+  border-bottom: 10px solid gray;
 
-.title-second-section {
-  padding-bottom: 1.5rem;
-  font-size: 1.7em;
+  .title-second-section {
+    padding-bottom: 1.5rem;
+    font-size: 1.7em;
+  }
+
+  .second-section-register {
+    padding: 1rem .5rem;
+  }
+  .text-register {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin:  1rem 0;
+  }
+
+@media screen and (min-width: 500px) {
+  .text-register {
+    padding: 0 3rem;
+  }
 }
 
-.second-section-register {
-  padding: 1rem .5rem;
-}
-.text-register {
-  font-size: 1.2rem;
-  font-weight: 400;
-  margin:  1rem 0;
+@media screen and (min-width: 550px) { 
+
+  padding: 5rem 3rem;
+
+  .title-second-section {
+    font-size: 2.5em;
+  }
 }
 
+@media screen and (min-width: 950px) { 
+
+  .title-second-section {
+    font-size: 3.3em;
+    margin-bottom: 1rem;
+  }
+
+  .start-right {
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+  }
+
+  .second-section-register {
+    margin-top: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1350px) { 
+
+  .start-right {
+    width: 65%;
+    margin: auto;
+    }
+}
 `
 
 const SecondSection = () => {
@@ -75,10 +116,11 @@ const SecondSection = () => {
             ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta
             o reiniciar tu membresía Netflix.
           </p>
-          <InputRegister />
-          <ButonStart />
+          <div className="start-right">
+            <InputRegister />
+            <ButonStart />
+          </div>
         </div>
-
       </div>
 
     </SecondSectionStyled>

@@ -13,13 +13,35 @@ const HeaderStyled = styled.header`
   }
 
   a {
+    font-size: 1em;
     text-decoration: none;
     background: #e50914;
     color: white;
     padding: .3rem .8rem;
     border-radius: .3rem;
-    margin-right: .5rem;
   }
+
+@media screen and (min-width: 500px) {
+    padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 550px) {
+  padding: 1.5rem 3.5rem;
+
+  img {
+    width: 7rem;
+  }
+
+  a{
+    font-size: 1.2em;
+  }
+}
+
+ @media screen and (min-width: 950px) {
+  img {
+    width: 8rem;
+  }
+}
   
 `
 const Header = () => {
